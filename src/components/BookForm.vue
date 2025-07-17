@@ -1,21 +1,21 @@
 <template>
   <div>
-    <h1>{{ isEdit ? 'Editar' : 'Nuevo' }} Libro</h1>
+    <h2 class="h4 mb-3">{{ isEdit ? 'Editar' : 'Nuevo' }} Libro</h2>
     <form @submit.prevent="save">
-      <div>
-        <label for="isbn">ISBN:</label>
-        <input id="isbn" v-model="book.isbn" :disabled="isEdit" required />
+      <div class="mb-3">
+        <label class="form-label" for="isbn">ISBN:</label>
+        <input class="form-control" id="isbn" v-model="book.isbn" :disabled="isEdit" required />
       </div>
-      <div>
-        <label for="title">Título:</label>
-        <input id="title" v-model="book.title" required />
+      <div class="mb-3">
+        <label class="form-label" for="title">Título:</label>
+        <input class="form-control" id="title" v-model="book.title" required />
       </div>
-      <div>
-        <label for="publisher">Publisher:</label>
-        <input id="publisher" v-model="book.publisher" />
+      <div class="mb-3">
+        <label class="form-label" for="publisher">Publisher:</label>
+        <input class="form-control" id="publisher" v-model="book.publisher" />
       </div>
       <!-- añade más campos según tu BookDto -->
-      <button type="submit">Guardar</button>
+      <button class="btn btn-primary" type="submit">Guardar</button>
     </form>
   </div>
 </template>

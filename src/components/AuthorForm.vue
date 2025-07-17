@@ -1,9 +1,12 @@
 <template>
   <div>
-    <h1>{{ isEdit ? 'Editar' : 'Nuevo' }} Autor</h1>
+    <h2 class="h4 mb-3">{{ isEdit ? 'Editar' : 'Nuevo' }} Autor</h2>
     <form @submit.prevent="save">
-      <input v-model="author.name" placeholder="Nombre" />
-      <button type="submit">Guardar</button>
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input class="form-control" v-model="author.name" placeholder="Nombre" />
+      </div>
+      <button class="btn btn-primary" type="submit">Guardar</button>
     </form>
   </div>
 </template>

@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h1>Dashboard</h1>
+    <h1 class="mb-4">Dashboard</h1>
 
-    <section>
-      <h2>Autores</h2>
+    <section class="mb-5">
+      <h2 class="h4 mb-3">Autores</h2>
       <AuthorsList />
     </section>
 
-    <section>
-      <h2>Libros</h2>
+    <section class="mb-5">
+      <h2 class="h4 mb-3">Libros</h2>
       <BooksList />
     </section>
 
-    <section>
-      <h2>Clientes</h2>
+    <section class="mb-5">
+      <h2 class="h4 mb-3">Clientes</h2>
       <CustomersList />
     </section>
   </div>
@@ -35,11 +35,4 @@ export default {
 </script>
 
 <style scoped>
-section {
-  margin-bottom: 2rem;
-}
-section h2 {
-  margin-bottom: 0.5rem;
-  color: #35495e;
-}
 </style>
