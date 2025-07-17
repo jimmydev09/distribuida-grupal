@@ -1,16 +1,20 @@
 <template>
   <div>
-    <h1>Autores</h1>
-    <router-link to="/authors/new">+ Nuevo autor</router-link>
-    <table>
-      <thead><tr><th>Nombre</th><th>Acciones</th></tr></thead>
+    <h2 class="h4 mb-3">Autores</h2>
+    <router-link class="btn btn-sm btn-primary mb-3" to="/authors/new">+ Nuevo autor</router-link>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th class="text-end">Acciones</th>
+        </tr>
+      </thead>
       <tbody>
         <tr v-for="a in items" :key="a.id">
           <td>{{ a.name }}</td>
-          <td>
-            <router-link :to="`/authors/${a.id}/edit`">Editar</router-link>
-            |
-            <button @click="del(a.id)">Eliminar</button>
+          <td class="text-end">
+            <router-link class="btn btn-sm btn-link" :to="`/authors/${a.id}/edit`">Editar</router-link>
+            <button class="btn btn-sm btn-link text-danger" @click="del(a.id)">Eliminar</button>
           </td>
         </tr>
       </tbody>
